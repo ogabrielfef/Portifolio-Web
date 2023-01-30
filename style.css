@@ -1,0 +1,205 @@
+/* Custon Font */
+
+@font-face {
+  font-family: Centra;
+  src: url('./assets/fonts/CentraNo2-Bold.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: Centra;
+  src: url('./assets/fonts/CentraNo2-Medium.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: Centra;
+  src: url('./assets/fonts/CentraNo2-Book.ttf');
+  font-weight: 400;
+}
+
+/* reset css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  font-family: Centra;
+  font-weight: 400;
+  color: white;
+}
+
+/* nav css */
+
+#header {
+  display: flex;
+  padding: 20px 0;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#header img {
+  width: 100px;
+}
+
+#links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+#links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+#links button {
+  background: rgba(255, 255, 255, 0.1);
+  width: 120px;
+  height: 40px;
+  border: 1px solid black;
+  font-weight: bold;
+  color: white;
+}
+
+#links button:hover {
+  width: 122px;
+  height: 42px;
+}
+
+/* home css */
+
+#home {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 80px;
+  background: url(./assets/banner-bg.png) no-repeat top center/cover;
+  height: 100vh;
+}
+
+#home img {
+  width: 300px;
+  height: 300px;
+}
+
+/* portifolio css */
+
+#portifolio-container {
+  background: url(./assets/bg-large.jpg) no-repeat top center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#portifolio {
+  /* height: 500px;
+  width: 500px; */
+  border: 1px solid red;
+  width: 70vw;
+  height: 70vh;
+}
+
+#portifolio{
+  overflow: hidden;
+}
+
+#portifolio > .portifolio-content{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  transition: all 500ms ease;
+  text-align: center;
+
+}
+
+#portifolio > .portifolio-content > .portifolio-item {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+#portifolio > input:nth-child(1):checked ~ .portifolio-content{
+  transform: translateX(0%);
+}
+
+#portifolio > input:nth-child(2):checked ~ .portifolio-content{
+  transform: translateX(-100%);
+}
+#portifolio > input:nth-child(3):checked ~ .portifolio-content{
+  transform: translateX(-200%);
+}
+
+#portifolio > input:nth-child(4):checked ~ .portifolio-content{
+  transform: translateX(-300%);
+}
+
+/* about css */
+
+#about {
+  background: url(./assets/bg-large.jpg) no-repeat top center/cover;
+  background-position-x: -1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#about-container {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  padding: 50px;
+  border: 1px solid red;
+}
+
+/* footer css */
+
+#footer {
+  background-color: #0f132e;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  font-size: 24px;
+}
+
+#footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%;
+  transition: background 0.2s;
+  color: white;
+}
+
+#footer a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Media queries */
+@media (max-width: 800px){
+  #home img {
+    z-index: 1;
+    opacity: 60%;
+  }
+  #text-home {
+    position: absolute;
+    z-index: 2;
+    padding: 15px;
+  }
+}
