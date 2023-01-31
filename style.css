@@ -44,7 +44,7 @@ body {
   position: fixed;
   width: 100vw;
   z-index: 9999;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 #header img {
@@ -59,17 +59,17 @@ body {
 
 .links a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: 700;
 }
 
 .links button {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.6);
   width: 120px;
   height: 40px;
   border: 1px solid black;
   font-weight: bold;
-  color: white;
+  color: black;
 }
 
 .links button:hover {
@@ -81,6 +81,7 @@ body {
   height: 75px;
   font-size: 30px;
   display: none;
+  color: black;
 }
 
 /* .links .active-menu {
@@ -233,10 +234,10 @@ body {
     top: 145px;
     flex-direction: column;
     width: 100%;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.7);
     padding-bottom: 10px;
     transform: translateX(100%);
-    transition: transform 0.3s ease-in;
+    transition: transform 0.5s ease-in;
   }
   .links.active {
     transform: translateX(0);
