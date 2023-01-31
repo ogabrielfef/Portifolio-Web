@@ -31,38 +31,39 @@ body {
   font-family: Centra;
   font-weight: 400;
   color: white;
+  overflow-x: hidden;
 }
 
 /* nav css */
 
 #header {
   display: flex;
-  padding: 20px 0;
+  padding: 20px 0 25px;
   justify-content: space-around;
   align-items: center;
   position: fixed;
   width: 100vw;
   z-index: 9999;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 #header img {
   width: 100px;
 }
 
-#links {
+.links {
   display: flex;
   gap: 15px;
   align-items: center;
 }
 
-#links a {
+.links a {
   text-decoration: none;
   color: white;
   font-weight: 700;
 }
 
-#links button {
+.links button {
   background: rgba(255, 255, 255, 0.1);
   width: 120px;
   height: 40px;
@@ -71,10 +72,20 @@ body {
   color: white;
 }
 
-#links button:hover {
+.links button:hover {
   width: 122px;
   height: 42px;
 }
+
+#menu {
+  height: 75px;
+  font-size: 30px;
+  display: none;
+}
+
+/* .links .active-menu {
+  display: block;
+} */
 
 /* home css */
 
@@ -90,6 +101,19 @@ body {
 #home img {
   width: 300px;
   height: 300px;
+  animation: updown 3s linear infinite
+}
+
+@keyframes updown {
+  0% {
+      transform: translateY(-20px);
+  }
+  50% {
+      transform: translateY(20px);
+  }
+  100% {
+      transform: translateY(-20px);
+  }
 }
 
 /* portifolio css */
@@ -103,9 +127,9 @@ body {
   width: 100vw;
 }
 
-#portifolio {
-  /* height: 500px;
-  width: 500px; */
+/* #portifolio {
+  height: 500px;
+  width: 500px;
   border: 1px solid red;
   width: 70vw;
   height: 70vh;
@@ -120,7 +144,6 @@ body {
   flex-wrap: nowrap;
   width: 100%;
   transition: all 500ms ease;
-  text-align: center;
 
 }
 
@@ -142,7 +165,7 @@ body {
 
 #portifolio > input:nth-child(4):checked ~ .portifolio-content{
   transform: translateX(-300%);
-}
+} */
 
 /* about css */
 
@@ -201,5 +224,21 @@ body {
     position: absolute;
     z-index: 2;
     padding: 15px;
+  }
+  #menu {
+    display: block;
+  }
+  .links {
+    position: absolute;
+    top: 145px;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .links.active {
+    transform: translateX(0);
   }
 }

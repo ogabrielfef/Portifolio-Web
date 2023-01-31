@@ -10,12 +10,15 @@
 <body>
   <nav id="header">
     <img src="./assets/Gabriel.png" alt="logo">
-    <div id="links">
+    <ion-icon name="menu-outline" id="menu" onclick="togleMenu()"></ion-icon>
+    <div class="links ">
       <a href="#home" alt="Home">Home</a>
       <a href="#portifolio-container" alt="Portifolio">Portifolio</a>
       <a href="#about" alt="about">About</a>
       <a href="#footer" alt="contact">Contact</a>
-      <button>Downlod CV</button>
+      <a href="./assets/download/Currículo-Gabriel-Ferreira.pdf" download>
+        <button>Downlod CV</button>
+      </a>
     </div>
   </nav>
   <section id="home">
@@ -29,7 +32,7 @@
     <img src="./assets/header-img.svg" alt="img-home">
   </section>
   <div id="portifolio-container">
-    <section id="portifolio">
+    <!-- <section id="portifolio">
         <input name='slide' type="radio" > 
         <input name='slide' type="radio" checked> 
         <input name='slide' type="radio">
@@ -41,7 +44,7 @@
           <div class="portifolio-item">3</div>
           <div class="portifolio-item">4</div>
       </div>
-    </section>
+    </section> -->
   </div>
   <section id="about">
     <div id="about-container">
@@ -71,5 +74,6 @@
   </footer>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
