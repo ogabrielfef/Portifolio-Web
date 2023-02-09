@@ -28,6 +28,10 @@ html {
   box-sizing: border-box;
 }
 
+* a {
+  text-decoration: none;
+}
+
 body {
   display: flex;
   width: 100vw;
@@ -159,7 +163,7 @@ body {
 
 #portifolio-iten:hover {
   box-shadow: inset 260px 0 0 0 rgba(128, 45, 128, 0.53);
-  color: white;
+  color: black;
 }
 
 #portifolio-iten img {
